@@ -1,0 +1,98 @@
+@use 'typography';
+
+$color-dark-1: #171717;
+$color-dark-2: #313131;
+$color-white: #dadada;
+$color-gray: #a7a7a7;
+$color-accent: #5921e6;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Calibre, sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: $color-accent;
+}
+
+.nav {
+  background: $color-dark-1;
+  color: $color-white;
+  padding: 1.5rem 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 0.4em;
+  }
+
+  &__link {
+    font-family: 'Montserrat', sans-serif;
+    // letter-spacing: 1.5px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+// Hero
+
+.hero {
+  height: calc(100vh - 6.4rem);
+  background-color: $color-dark-2;
+  color: $color-white;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__name {
+    font-size: 6.4rem;
+  }
+
+  &__slogan {
+    font-size: 4.8rem;
+    color: $color-gray;
+  }
+}

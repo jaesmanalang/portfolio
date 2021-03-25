@@ -4,7 +4,7 @@
   "description": "Version 1.0 of my portfolio",
   "main": "index.js",
   "scripts": {
-    "scss": "sass -watch scss:css"
+    "scss": "sass --watch scss:css"
   },
   "keywords": [],
   "author": "",
