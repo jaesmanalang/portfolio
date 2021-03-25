@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
 
 @font-face {
   font-family: 'Calibre';
-  src: url('../assets/fonts/Calibre-Regular.woff2');
+  src: url('../assets/fonts/Calibre-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Bebas Neue';
-  src: url('../assets/fonts/BebasNeuePro-Regular.woff2');
+  src: url('../assets/fonts/BebasNeuePro-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../assets/fonts/inconsolata-v21-latin-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
 }
