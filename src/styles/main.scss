@@ -1,9 +1,6 @@
-$color-blue: blue;
+@use 'vendors/bootstrap';
 
-h1 {
-  color: $color-blue;
-}
+@use 'base/base';
+@use 'base/typography';
 
-body {
-  background: black;
-}
+@use 'sections/hero';
