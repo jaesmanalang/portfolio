@@ -1,22 +1,44 @@
-// #hero {
-//   min-height: 100vh;
-//   height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
-#hero {
+.hero {
+  background-color: $color-white;
+  color: $color-dark-blue-text;
   min-height: 100vh;
-  height: 100vh;
   display: flex;
   align-items: center;
-  border-bottom: 0px;
-  // background: green;
-  font-weight: 400;
-  color: black;
-  padding: 0rem 5.6rem;
   z-index: -1;
+
+  @include respond(phone) {
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 2.5rem;
+    max-width: 1000px;
+  }
+
+  &__title {
+    font-weight: 700;
+    @include respond(phone) {
+      font-size: $default-font-size;
+    }
+  }
+
+  &__name {
+    margin-top: 2rem;
+  }
+
+  &__intro {
+    max-width: 500px;
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+      font-size: $default-font-size;
+      max-width: 300px;
+      margin: 1.5rem auto;
+    }
+  }
 }
 //   // If you want to set a background image on the hero section, uncomment these with yout custom image
 

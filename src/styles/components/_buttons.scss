@@ -1,0 +1,61 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.cta {
+  display: inline-block;
+  position: relative;
+  padding: 1.2rem $default-font-size;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+
+  @include respond(phone) {
+    font-size: $default-font-size;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+}
+
+.cta--hero {
+  @include supportColorForIE11();
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  border-image-slice: 1;
+  @include supportIE11() {
+    color: $secondary-color !important;
+    &:hover {
+      color: $color-white !important;
+    }
+  }
+
+  &::after {
+    background-image: linear-gradient(
+      135deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+  }
+
+  &:hover {
+    -webkit-text-fill-color: $color-white;
+    text-decoration: none;
+    &::after {
+      width: 100%;
+    }
+  }
+}
