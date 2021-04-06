@@ -2,23 +2,24 @@
 @use '../abstracts/mixins' as *;
 
 .hero {
-  background-color: $color-white;
+  background-color: $color-dark;
   color: $color-dark-blue-text;
   min-height: 100vh;
   display: flex;
   align-items: center;
   z-index: -1;
 
-  @include respond(phone) {
-    text-align: center;
-  }
-
   .container {
-    padding: 0 2.5rem;
     max-width: 1000px;
+    padding: 0 3rem;
+    @include respond(phone-xs) {
+      padding: 0 2rem;
+    }
   }
 
   &__title {
+    color: $color-white;
+    margin-top: 7rem;
     font-weight: 700;
     @include respond(phone) {
       font-size: $default-font-size;
@@ -31,12 +32,15 @@
 
   &__intro {
     max-width: 500px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 
     @include respond(phone) {
+      max-width: 400px;
+      margin-top: 1.5rem;
+    }
+
+    @include respond(phone-xs) {
       font-size: $default-font-size;
-      max-width: 300px;
-      margin: 1.5rem auto;
     }
   }
 }

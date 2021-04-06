@@ -50,6 +50,10 @@ a:hover {
   font-family: 'Bebas Neue', sans-serif;
 }
 
+.text-muted {
+  color: $color-gray;
+}
+
 .text-gradient {
   @include supportColorForIE11();
 }

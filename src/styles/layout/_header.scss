@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography';
+@use '../abstracts/mixins' as *;
+
+.header {
+  background: $color-dark;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px 2px rgba(15, 15, 15, 0.4);
+  z-index: 100;
+}
+
+.nav {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin: 0 2rem;
+  }
+
+  &__link {
+    font-family: 'Calibre', sans-serif;
+    font-size: $default-font-size;
+    color: $color-white;
+  }
+}
+
+.logo {
+  font-family: 'Bebas Neue', 'Calibre', sans-serif;
+  font-size: 3rem;
+  color: $secondary-color;
+
+  @include respond(phone) {
+    font-size: $mid-font-size;
+  }
+}
