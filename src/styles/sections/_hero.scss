@@ -20,7 +20,7 @@
   &__title {
     color: $color-white;
     margin-top: 7rem;
-    font-weight: 700;
+    font-weight: 300;
     @include respond(phone) {
       font-size: $default-font-size;
     }

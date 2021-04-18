@@ -30,12 +30,20 @@
 
   &__item {
     margin: 0 2rem;
+
+    @include respond(phone) {
+      margin: 0 1rem;
+    }
   }
 
   &__link {
-    font-family: 'Calibre', sans-serif;
+    font-family: Roboto Mono, sans-serif;
     font-size: $default-font-size;
     color: $color-white;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 }
 

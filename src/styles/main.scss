@@ -6,5 +6,10 @@
 @use 'components/buttons';
 
 @use 'layout/header';
+@use 'layout/footer';
+@use 'layout/sections';
 
 @use 'sections/hero';
+@use 'sections/about';
+@use 'sections/projects';
+@use 'sections/contact';

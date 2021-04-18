@@ -13,16 +13,8 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg|pdf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/images',
-              esModule: false,
-            },
-          },
-        ],
+        test: /\.(jpg|jpeg|png|gif|svg|pdf)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.(woff|woff2)$/,

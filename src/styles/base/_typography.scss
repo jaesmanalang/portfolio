@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
 
 @font-face {
@@ -38,6 +38,8 @@ a:hover {
 }
 
 .big-heading {
+  font-family: Calibre, Comfortaa, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: clamp(2.8rem, 8vw, 8.4rem);
   font-weight: 700;
 }
@@ -52,6 +54,10 @@ a:hover {
 
 .text-muted {
   color: $color-gray;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-gradient {
